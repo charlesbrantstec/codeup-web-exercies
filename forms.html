@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Register With Us</title>
 </head>
 <body>
-$END$
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <label for="email"><strong>Input Your Email</strong> </label>
+        <input type="text" name="email" id="email" placeholder="Email goes here" />
+
+        <label for="password"><strong>Input Your Password</strong></label>
+        <input type="password" name="pw" id="password" placeholder="Your password goes here" />
+
+        <br>
+        <br>
+        <label for="bio"><strong>Bio:</strong></label>
+        <br>
+        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Describe yourself"></textarea>
+
+        <h3>How did you hear about us?</h3>
+        <input type="radio" name="billboard" value="A" id="A"> <label for="A"><em>billboard</em></label><br>
+        <input type="radio" name="radio advertisment" value="B" id="B"> <label for="B"><em>radio advertisment</em></label><br>
+        <input type="radio" name="internet advertisment" value="C" id="C"> <label for="C"><em>internet advertisment</em></label><br>
+        <input type="radio" name="other" value="D" id="D"> <label for="D"><em>other</em></label><br>
+
+        <br>
+        <label for="dropdown"><strong>Select your browser:</strong></label>
+        <select name="dropdown" id="dropdown">
+            <option value="Google Chrome">Google Chrome</option>
+            <option value="Internt Exlporer">Internet Exlporer</option>
+            <option value="Mozilla Firefox" selected>Mozilla Firefox</option>
+            <option value="Brave">Brave</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit" style="background-color: mediumpurple ">Submit your form</button>
+    </form>
 </body>
 </html>
