@@ -1,0 +1,39 @@
+.fancy-header {
+    color: cyan; /* single line comment */
+    text-decoration: underline;
+}
+h1 {
+    text-align: center;
+}
+h1, h2 {
+    color: cyan;
+    text-decoration: underline;
+}
+body {
+    background-color: lightpink;
+}
+body {
+    background-image: url("../img/pink.jpg") ;
+}
+body {
+    font-family: "Tahoma";
+}
+ul, ol {
+    list-style: square;
+}
+td, tr {
+    font-size: 14px;
+    padding: 20px;
+}
+a:visited {color: mediumvioletred;}
+a:hover {color: aqua;}
+a:link {color: blue;}
+a:active{color: darkorchid;}
+
+td, tr, th {
+    border: 2px solid black;
+    font-size: 18px;
+}
+table {
+    border-collapse: collapse;
+}
