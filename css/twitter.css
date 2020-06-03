@@ -93,18 +93,17 @@ a {
 }
 .profile-details{
     float: left;
-    width: calc(25% - .75em);
+    width: calc(25% - 1em);
     margin: 0 .5em .5em 0;
 }
 .timeline{
     float: left;
-    width: calc(50% - .75em);
+    width: calc(50% - 1em);
     margin: 0 .5em .5em 0;
 }
 .who-to-follow{
-    detail: inline-block;
-    float: right;
-    width: calc(25% - .75em);
+    float: left;
+    width: calc(25% - 1em);
     margin: 0 .5em .5em 0;
 }
 .media{
