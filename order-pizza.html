@@ -33,6 +33,7 @@
             </li>
         </ul>
     </nav>
+    <br>
     <div class="container-fluid">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -41,18 +42,103 @@
         </div>
         <h2>Build your own pizza!</h2>
         <hr>
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">1</span>  Size and crust</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">2</span>  Cheese and Sauce</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">3</span>  Toppings</a>
-                    </li>
-                </ul>
-
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="sizecrust-tab" data-toggle="tab" href="#sizecrust" role="tab" aria-controls="sizecrust">
+                                <span class="badge badge-pill badge-secondary">1</span>  Size and crust</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="cheesesauce-tab" data-toggle="tab" href="#cheesesauce" role="tab" aria-controls="cheesesauce">
+                                <span class="badge badge-pill badge-secondary">2</span>  Cheese and Sauce</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings">
+                                <span class="badge badge-pill badge-secondary">3</span>  Toppings</a>
+                        </li>
+                    </ul>
+        <br>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="sizecrust" role="tabpanel" aria-labelledby="sizecrust-tab">
+            <div class="card">
+                <div class="card-header text-white bg-primary mb-3">Choose size and crust</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-dark">Hand Tossed</li>
+                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                        <li class="list-group-item"><input type="radio"> Small (10")</li>
+                        <li class="list-group-item"><input type="radio"> Medium (12")</li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-dark">Crispy Thin</li>
+                        <li class="list-group-item">Thin enough for optimum crispy to curnchy ratio.</li>
+                        <li class="list-group-item"><input type="radio"> Medium (12")</li>
+                        <li class="list-group-item"><input type="radio"> Large (14")</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="tab-pane fade" id="cheesesauce" role="tabpanel" aria-labelledby="cheesesauce-tab">
+                <div class="card">
+                    <div class="card-header text-white bg-primary mb-3">Choose cheese and sauce</div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-dark">Cheese</li>
+                            <li class="list-group-item"><label for="exampleFormControlSelect1">How much?</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Light</option>
+                                    <option>Normal</option>
+                                    <option>Extra</option>
+                                    <option>Double</option>
+                                </select></li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-dark">Sauce</li>
+                            <li class="list-group-item"><label for="exampleFormControlSelect1">What type?</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Tomato sauce</option>
+                                    <option>Marinara sauce</option>
+                                    <option>BBQ sauce</option>
+                                    <option>Alfredo sauce</option>
+                                </select></li>
+                            <li class="list-group-item"><label for="exampleFormControlSelect1">How much?</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Light</option>
+                                    <option>Normal</option>
+                                    <option>Extra</option>
+                                </select></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
+                <div class="card">
+                    <div class="card-header text-white bg-primary mb-3">Choose Toppings</div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-dark">Choose Meats</li>
+                            <li class="list-group-item"><input type="checkbox"> Beef</li>
+                            <li class="list-group-item"><input type="checkbox"> Ham</li>
+                            <li class="list-group-item"><input type="checkbox"> Philly Steak</li>
+                            <li class="list-group-item"><input type="checkbox"> Bacon</li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-dark">Choose Non-Meats</li>
+                            <li class="list-group-item"><input type="checkbox"> Green Peppers</li>
+                            <li class="list-group-item"><input type="checkbox"> Mushrooms</li>
+                            <li class="list-group-item"><input type="checkbox"> Onions</li>
+                            <li class="list-group-item"><input type="checkbox"> Jalapeno Peppers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <br>
     </div>
 
 
