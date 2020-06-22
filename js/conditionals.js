@@ -19,31 +19,63 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
-/**
- * TODO:
- * Pass the `randomColor` variable to your function and console.log the results.
- * You should see a different message every time you refresh the page
- */
-
-/**
- * TODO:
- * Refactor your above function to use a switch-case statement
- */
-
-/**
- * TODO:
- * Prompt the user for a color when the page loads, and pass the input from the
- * user to your `analyzeColor` function. Alert the return value from your
- * function to show it to the user.
- */
+// var analyzeColor = function (color) {
+//     if (color==='blue'){
+//         return ("Blue is the color of the sky");
+//     } else if (color==='red'){
+//         return ("Strawberries are red");
+//     } else if (color==='cyan'){
+//         return ("I don't know anything about cyan");
+//     } else {
+//         return ("Color passed is not one of the ones defined below.");
+//     }
+// }
+// console.log(analyzeColor('cyan'));
+//
+// // Don't change the next two lines!
+// // These lines create two variables for you:
+// // - `colors`: a list of the colors of the rainbow
+// // - `randomColor`: contains a single random color value from the list (this
+// //                  will contain a different color every time the page loads)
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+// /**
+//  * TODO:
+//  * Pass the `randomColor` variable to your function and console.log the results.
+//  * You should see a different message every time you refresh the page
+//  */
+// // console.log(analyzeColor(randomColor));
+// /**
+//  * TODO:
+//  * Refactor your above function to use a switch-case statement
+//  */
+// var analyzeColor = function (color) {
+//     switch (color) {
+//         case ('blue'):
+//             return ("Blue is the color of the sky");
+//             break;
+//         case ('red'):
+//             return ("Strawberries are red");
+//             break;
+//         case ('cyan'):
+//             return ("I don't know anything about cyan");
+//             break;
+//         default:
+//             return ("Color passed is not one of the ones defined below.");
+//             break;
+//     }
+// }
+// console.log(analyzeColor(randomColor));
+//
+// /**
+//  * TODO:
+//  * Prompt the user for a color when the page loads, and pass the input from the
+//  * user to your `analyzeColor` function. Alert the return value from your
+//  * function to show it to the user.
+//  */
+// let color = prompt("Enter a color");
+//
+// alert(analyzeColor(color));
 
 /* ########################################################################## */
 
@@ -67,15 +99,69 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-/**
- * TODO:
- * Uncomment the line below to generate a random number between 0 and 6.
- * Prompt the user for their total bill, then use your `calculateTotal` function
- * and alerts to display to the user what their lucky number was, what their
- * price before the discount was, and what their price after the discount is.
- */
-// Generate a random number between 0 and 6
+
+// var calculateTotal = function (luckyNumber, totalAmount) {
+//     if (luckyNumber === '1') {
+//         return "Your total is $" + (totalAmount - (totalAmount * .10));
+//     } else if (luckyNumber === '2') {
+//         return "Your total is $" + (totalAmount - (totalAmount * .25));
+//     } else if (luckyNumber === '3') {
+//         return "Your total is $" + (totalAmount - (totalAmount * .35));
+//     } else if (luckyNumber === '4') {
+//         return "Your total is $" + (totalAmount - (totalAmount * .50));
+//     } else if (luckyNumber === '5') {
+//         return "Your total is $" + (totalAmount * 0);
+//     }
+// }
+
+// let luckyNumber = prompt("What is your lucky number?");
+// let totalAmount = parseFloat(prompt("What is your total amount?"));
+
+// console.log(calculateTotal('3', 100));
+
+// function calculateTotal(luckyNumber, grandTotal){
+//     var discountRate = 0;
+//     switch (luckyNumber){
+//         case 0:
+//             discountRate = 0;
+//             break;
+//         case 1:
+//             discountRate = .10;
+//             break;
+//         case 2:
+//             discountRate = .25;
+//             break;
+//         case 3:
+//             discountRate = .35;
+//             break;
+//         case 4:
+//             discountRate = .50;
+//             break;
+//         case 5:
+//             discountRate = 1;
+//             break;
+//     }
+//     return grandTotal - (discountRate * grandTotal);
+//
+// }
+//
+// /**
+//  * TODO:
+//  * Uncomment the line below to generate a random number between 0 and 6.
+//  * Prompt the user for their total bill, then use your `calculateTotal` function
+//  * and alerts to display to the user what their lucky number was, what their
+//  * price before the discount was, and what their price after the discount is.
+//  */
+// // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+// // var totalBill = prompt("What is your total bill?");
+// // alert("Your lucky number is " + luckyNumber );
+// // alert("Your price after discount is " + calculateTotal(luckyNumber, totalBill).toFixed(2));
+// let totalBill = prompt("your current total");
+// alert("We're running a promotion today! here's your lucky number " + luckyNumber );
+// alert("Your previous total is " + totalBill + " and Your new total now comes out to " + calculateTotal(luckyNumber, totalBill).toFixed(2));
+//
+
 
 /**
  * TODO:
@@ -93,3 +179,30 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+confirm("Would you like to enter a number?");
+var num = parseInt(prompt("Enter a number"));
+alert("This if your number + 100 : " + (num + 100));
+function isEvenOrOddOrPositiveOrNegative(num) {
+    if (num % 2 === 0) {
+        alert ("Your number is even.")
+    } else if (num % 2 === 1) {
+        alert ("Your number is odd.")
+    } if (num > 0 ) {
+        alert("Your number is positive")
+    } else if (num < 0) {
+        alert ("Your number is negative")
+    }
+}
+isEvenOrOddOrPositiveOrNegative(num)
+
+
+
+
+
+
+
+
+
+
+
+
