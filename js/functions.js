@@ -59,10 +59,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-const iwTwo = function (num) {
+const isTwo = function (num) {
     return num === 2;
 }
-console.log(istwo(random));
+console.log(isTwo(random));
 
 
 /**

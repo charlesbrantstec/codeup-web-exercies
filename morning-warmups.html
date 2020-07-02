@@ -6,115 +6,167 @@
 </head>
 <body>
     <script>
-        function timesFive(n) {
-            return n * 5;
-        }
+       //  function timesFive(n) {
+       //      return n * 5;
+       //  }
+       //
+       // function happyBirthday(name){
+       //      console.log("Happy birthday to you, happy birthday to you, Happy birthday dear "+ name +", happy birthday to you!");
+       //  }
+       //  happyBirthday("Vanessa");
+       //
+       //  function countingPlusFive(n){
+       //      for(let i=0; i<5;i++){
+       //          console.log(num+i);
+       //      }
+       //  }
+       //  countingPlusFive(5);
+       //      function returnSeven(n){
+       //      var n = 7
+       //      return n;
+       //  }
+       //
+       //  function lengthOfString(s){
+       //      return s.length;
+       //  }
+       //  console.log(lengthOfString("Good Morning"));
+       //
+       //  function charactersInString(str){
+       //      return str.lenghth;
+       //  }
+       //  console.log(charactersInString("This is the same as the last exercise"));
+       //
+       //  function circleDiamter(rad){
+       //      return rad * 2 ;
+       //  }
+       //  function squareRoot(n){
+       //      return Math.sqrt(n);
+       //  }
+       //  function returnArgument(p){
+       //      return p;
+       //  }
+       //  // write a javascript describind a string with the type of argument passed through
+       //  function argType(x){
+       //      console.log(typeof x);
+       //  }
+       //
+       //  function checkIfEven(n){
+       //      return n % 2 == 0;
+       //  }
+       //
+       //  console.log(2, 4, 6, 8, 10, 12, 14, 16, 18, 20)
+       //
+       //  var num = 2;
+       //  console.log(num);
+       //  num+=2;
+       //  console.log(num);
+       //  num+=2;
+       //  console.log(num);
+       //  num+=2;
+       //  console.log(num);
+       //  num+=2;
+       //  console.log(num);
+       //  num+=2;
+       //  console.log(num);
+       //  num+=2;
+       //  console.log(num);
+       //  num+=2;
+       //  console.log(num);
+       //  num+=2;
+       //  console.log(num);
+       //  num+=2;
+       //  console.log(num);
+       //  num+=2;
+       //
+       //  for(let var = 2; i<=20; i++){
+       //      if (i % 2 === 0){
+       //          console.log(i);
+       //      }
+       //  }
+       //
+       //  const countFromBy = function(num1, num2) {
+       //      console.log(num1);
+       //      num += num2;
+       //      console.log(num1);
+       //      num += num2;
+       //      console.log(num1);
+       //      num += num2;
+       //      console.log(num1);
+       //      num += num2;
+       //      console.log(num1);
+       //      num += num2;
+       //  }
+       //  function magic8Ball (n){
+       //      if (n===1){
+       //          return 'As I see it, yes.';
+       //      } else if (n===2) {
+       //          return 'Ask again later.';
+       //      } else if (n===3) {
+       //          return 'Better not tell you now.';
+       //      } else if (n===4) {
+       //          return 'Cannot predict now.';
+       //      } else if (n===5) {
+       //          return 'Concentrate and ask again.';
+       //      } else if (n===6) {
+       //          return 'Don\'t count on it.;
+       //      } else if (n===7) {
+       //          return 'Outlook not so good.';
+       //      } else if (n===8) {
+       //          return 'Outlook is good.';
+       //      }
+       //  }
+       //  // function lightsOn(lights){
+       //  //     if (lights==on){
+       //  //         return "Turn lights off";
+       //  //     } else if (lights==off){
+       //  //         return "Turn lights on";
+       //  //     }
+       //  // }
+       //  let lights = "on";
+       //  let lightSwitch = function (){
+       //      if (lights==="on"){
+       //          lights = "off";
+       //      } else {
+       //          lights = "on";
+       //      }
+       //  }
+       //
+       //  console.log("lights are " + lights);
+       //  lightSwitch();
+       //  console.log("lights are now " + lights);
+       //  lightSwitch();
+       //  console.log("lights are " + lights);
+       //  lightSwitch();
+       //  console.log("lights are now " + lights);
+       //  lightSwitch();   console.log("lights are " + lights);
+       //  lightSwitch();
+       //  console.log("lights are now " + lights);
+       //  lightSwitch();
+       //
+       //  //create a loop that counts from 1 through ten and says if the number is even or odd
+       //  var countToTen = function () {
+       //      var num = 1;
+       //      while (num <= 10) {
+       //          if (n % 2 === 0) {
+       //              console.log(n + "is even")
+       //          } else {
+       //              console.log(n + "is odd")
+       //          }
+       //          num++;
+       //      }
+       //  }
 
-       function happyBirthday(name){
-            console.log("Happy birthday to you, happy birthday to you, Happy birthday dear "+ name +", happy birthday to you!");
-        }
-        happyBirthday("Vanessa");
-
-        function countingPlusFive(n){
-            for(let i=0; i<5;i++){
-                console.log(num+i);
+        function doubleChar(str){
+            let returnString = "";
+            for(let i = 0; i<str.length; i++){
+                returnString+= str[i]+str[i];
+                console.log(returnString);
             }
+            return returnString;
         }
-        countingPlusFive(5);
-            function returnSeven(n){
-            var n = 7
-            return n;
-        }
+        console.log(doubleChar(banana));
 
-        function lengthOfString(s){
-            return s.length;
-        }
-        console.log(lengthOfString("Good Morning"));
 
-        function charactersInString(str){
-            return str.lenghth;
-        }
-        console.log(charactersInString("This is the same as the last exercise"));
-
-        function circleDiamter(rad){
-            return rad * 2 ;
-        }
-        function squareRoot(n){
-            return Math.sqrt(n);
-        }
-        function returnArgument(p){
-            return p;
-        }
-        // write a javascript describind a string with the type of argument passed through
-        function argType(x){
-            console.log(typeof x);
-        }
-
-        function checkIfEven(n){
-            return n % 2 == 0;
-        }
-
-        console.log(2, 4, 6, 8, 10, 12, 14, 16, 18, 20)
-
-        var num = 2;
-        console.log(num);
-        num+=2;
-        console.log(num);
-        num+=2;
-        console.log(num);
-        num+=2;
-        console.log(num);
-        num+=2;
-        console.log(num);
-        num+=2;
-        console.log(num);
-        num+=2;
-        console.log(num);
-        num+=2;
-        console.log(num);
-        num+=2;
-        console.log(num);
-        num+=2;
-        console.log(num);
-        num+=2;
-
-        for(let var = 2; i<=20; i++){
-            if (i % 2 === 0){
-                console.log(i);
-            }
-        }
-
-        const countFromBy = function(num1, num2) {
-            console.log(num1);
-            num += num2;
-            console.log(num1);
-            num += num2;
-            console.log(num1);
-            num += num2;
-            console.log(num1);
-            num += num2;
-            console.log(num1);
-            num += num2;
-        }
-        function magic8Ball (n){
-            if (n===1){
-                return 'As I see it, yes.';
-            } else if (n===2) {
-                return 'Ask again later.';
-            } else if (n===3) {
-                return 'Better not tell you now.';
-            } else if (n===4) {
-                return 'Cannot predict now.';
-            } else if (n===5) {
-                return 'Concentrate and ask again.';
-            } else if (n===6) {
-                return 'Don\'t count on it.;
-            } else if (n===7) {
-                return 'Outlook not so good.';
-            } else if (n===8) {
-                return 'Outlook is good.';
-            }
-        }
     </script>
 </body>
 </html>
