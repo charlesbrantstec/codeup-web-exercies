@@ -1,8 +1,8 @@
 (function(){
     "use strict";
 
-    let planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    let planetsArray = planetsString.split('');
+     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
+
 
     /**
      * TODO:
@@ -10,7 +10,7 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-
+    var planetsArray = planetsString.split('|');
     console.log(planetsArray);
 
     /**
@@ -18,8 +18,8 @@
      * Create a string with <br> tags between each planet. console.log() your
      * results. Why might this be useful?
      */
-    let planetString = planetsArray.join('<br>');
-    console.log(planetString);
+    var p2String = planetsArray.join('<br>');
+    console.log(p2String);
 
     /**
      *
@@ -28,8 +28,8 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-
-
-
+    var htmlString = '<ul> <li>';
+    htmlString += planetsArray.join('</li><li>');
+    console.log(p2String);
 
 })();
