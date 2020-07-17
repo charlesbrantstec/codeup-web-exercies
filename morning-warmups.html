@@ -155,16 +155,34 @@
        //          num++;
        //      }
        //  }
+       //
+       //  function doubleChar(str){
+       //      let returnString = "";
+       //      for(let i = 0; i<str.length; i++){
+       //          returnString+= str[i]+str[i];
+       //          console.log(returnString);
+       //      }
+       //      return returnString;
+       //  }
+       //  console.log(doubleChar(banana));
+       // function fibonacci(num) {
+       //     if (num <= 1) return 1;
+       //
+       //     return fibonacci(num - 1) + fibonacci(num - 2);
+       // }
+       // console.log(fibonacci(8));
+       const isolateTensdigit = function (threeDigitNum){
+           threeDigitNum %= 100;
+           threeDigitNum /= 10;
+           threeDigitNum = Math.floor(threeDigitNum);
+           return threeDigitNum;
 
-        function doubleChar(str){
-            let returnString = "";
-            for(let i = 0; i<str.length; i++){
-                returnString+= str[i]+str[i];
-                console.log(returnString);
-            }
-            return returnString;
-        }
-        console.log(doubleChar(banana));
+       }
+
+
+
+
+
 
 
     </script>

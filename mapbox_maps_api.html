@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+
+    <meta charset="UTF-8">
+    <title>Mapbox Maps API</title>
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1 style="text-align:center">My First Mapbox Map!</h1>
+<div id='map'></div>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+    <script>
+    mapboxgl.accessToken = mapBoxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-98.491142, 29.424349],
+        zoom: 15.8
+
+    });
+
+    map.on('load', function() {
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Fogo De Chao</strong>' +
+                                '<p>Upscale Brazilian chain for all-you-can-eat meat carved tableside plus an extensive salad bar.</p>',
+                            'icon': 'restaurant'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-98.484521,29.423109]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Texas De Brazil</strong>' +
+                                '<p>Upscale Brazilian eatery featuring all-you-can-eat grilled meat carved tableside & a salad bar.\n' +
+                                '\n</p>',
+                            'icon': 'restaurant'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-98.489155,29.426594]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Saltgrass Steakhouse</strong>' +
+                                '<p>Informal Texas-themed chain offers a meaty menu & full bar amid cattle kitsch decor.</p>',
+                            'icon': 'restaurant'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-98.488685,29.424808]
+                        }
+                    }
+                ]
+            }
+        });
+// Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'symbol',
+            'source': 'places',
+            'layout': {
+                'icon-image': '{icon}-15',
+                'icon-allow-overlap': true
+            }
+        });
+
+// When a click event occurs on a feature in the places layer, open a popup at the
+// location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function(e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+// Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function() {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+// Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function() {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+</script>
+
+
+
+</script>
+</body>
+</html>
