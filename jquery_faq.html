@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="css/jquery_faq.css">
 </head>
 <body>
-$END$
+<p>National Parks FAQ's:</p>
+<dl>
+    <dt>What was the first national park?</dt>
+    <dd class="invisible">Yellowstone National Park</dd>
+    <br>
+    <dt>When was the first national founded?</dt>
+    <dd class="invisible">Yellowstone National Park is the first national park and was founded in 1872.</dd>
+    <br>
+    <dt>Which president established the National Park Service?</dt>
+    <dd class="invisible">President Woodrow Wilson established the National Park Service in 1916. </dd>
+    <br>
+    <dt>Is the Grand Canyon the most visited national park?</dt>
+    <dd class="invisible">No, the most visited national park is the Great Smoky Mountains National Park</dd>
+    <br>
+    <dt>Among the national parks how popular is the Grand Canyon?</dt>
+    <dd class="invisible">The Grand Canyon is the 2nd most visited national park.</dd>
+    <br>
+    <dt>How many national park visits were there in 2019?</dt>
+    <dd class="invisible">327,516,619</dd>
+    <br>
+    <dt>What is the parent agency of the National Park Service?</dt>
+    <dd class="invisible">The Department of the Interior.</dd>
+    <br>
+    <dt>When was the Redwood National Park founded?</dt>
+    <dd class="invisible">Redwood National Park was founded in 1968.</dd>
+    <br>
+    <dt>How many total visits to national parks have there been in the U.S. since their conception?</dt>
+    <dd class="invisible">14,654,346,148</dd>
+    <br>
+    <dt>Which parks had more than 10 million visits last year?</dt>
+    <dd class="invisible">Golden Gate National Recreation Area, Blue Ridge Parkway, and Great Smoky Mountains National Park</dd>
+</dl>
+<script src="js/jquery.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        $('body').click(function(event) {
+            // event.preventDefault();
+            $('dd').toggleClass('invisible');
+        });
+    });
+</script>
 </body>
 </html>

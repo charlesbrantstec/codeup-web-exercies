@@ -178,15 +178,23 @@
        //     return threeDigitNum;
        //
        // }
-        console.log(reverseOrder());
-        function reverseOrder(arr){
-            for(let j = 0; j <arr.length; j++){
-                if(typeof arr[j] !=="string"){
-                    return null;
-                }
+       //  console.log(reverseOrder());
+       //  function reverseOrder(arr){
+       //      for(let j = 0; j <arr.length; j++){
+       //          if(typeof arr[j] !=="string"){
+       //              return null;
+       //          }
+       //      }
+       //      return arr.sort().reverse();
+       //  }
+        function evenlyDivisible(x,y){
+            if(typeof x === "number" && typeof y === "number"){
+                return x%y===0;
+            }else{
+                return null;
             }
-            return arr.sort().reverse();
         }
+        console.log(evenlyDivisible(4,2));
 
     </script>
 </body>

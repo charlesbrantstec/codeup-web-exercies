@@ -11,6 +11,7 @@
 </head>
 <body>
 <audio id="8bit">
+<!--    audio file-->
     <source src="img/retro%208bit%20gaming%20loop%20SoundEffectsFactory.mp3" type="audio/mpeg">
 </audio>
 <h1 style="text-align: center">Konami Code</h1>
@@ -22,14 +23,16 @@
     })
     $(document).ready(function () {
         var index = 0,
-            //       [up, up, dn, dn, lt, rt, lt, rt,  b,  a, rtn]
+            //"↑ ↑ ↓ ↓ ← → ← → b a enter"
             konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 
         $(document).keydown(
             function (e) {
+                //checks if keyboard event sequence is following the konami code
                 if (e.keyCode == konami[index++]) {
+                    //if following matches sequence length with konami for completion
+                    //and applies gif, sound, h1 changes
                     if (index == konami.length) {
-                        // user has entered the full konami code
                         $('#8bit')[0].play();
                         $('body').addClass("background");
                         $('h1').addClass("font");
@@ -38,11 +41,11 @@
                         index = 0;
                     }
                 } else {
+                    //resets the sequence if wrong key pressed
                     index = 0;
                 }
             });
     });
-
 </script>
 </body>
 </html>
