@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Konami Code</title>
+    <style type="text/css">
+        .background{background-image: url("img/konami.gif")}
+        .font{color: white}
+        .size{font-size: 100px}
+    </style>
 </head>
 <body>
-$END$
+<audio id="8bit">
+    <source src="img/retro%208bit%20gaming%20loop%20SoundEffectsFactory.mp3" type="audio/mpeg">
+</audio>
+<h1 style="text-align: center">Konami Code</h1>
+<script src="js/jquery.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function(){
+        alert('Enter the secret code.')
+    })
+    $(document).ready(function () {
+        var index = 0,
+            //       [up, up, dn, dn, lt, rt, lt, rt,  b,  a, rtn]
+            konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+
+        $(document).keydown(
+            function (e) {
+                if (e.keyCode == konami[index++]) {
+                    if (index == konami.length) {
+                        // user has entered the full konami code
+                        $('#8bit')[0].play();
+                        $('body').addClass("background");
+                        $('h1').addClass("font");
+                        $('h1').addClass("size");
+                        $('h1').text("GOD MODE ACTIVATED");
+                        index = 0;
+                    }
+                } else {
+                    index = 0;
+                }
+            });
+    });
+
+</script>
 </body>
 </html>
