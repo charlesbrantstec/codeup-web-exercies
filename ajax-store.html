@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <link rel="stylesheet" href="css/ajaxtools.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="mx-auto">
+
+</div>
+<div class="w-75 p-3 mx-auto">
+    <nav class="navbar navbar-dark bg-dark">
+        <h1 class="mx-auto text-white">My Tool Store</h1>
+    </nav>
+    <table id="products" class="table table-dark">
+        <thead class="thead-dark">
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+        </thead>
+        <tbody id="insertProducts"></tbody>
+    </table>
+    <input type="button" value="Refresh Tools" id="refresh" class="btn btn-warning btn-lg btn-block">
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+(function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    // TODO: Take the data from inventory.json and append it to the products table
+    $(document).ready(function (){
+        $.ajax("data/inventory.json").done(function(json){
+            $.each(json, function(i, data){
+                $("#insertProducts").append("<tr><th>" + data.title + "</th><th>" + data.quantity + "</th><th>" + data.price + "</th><th>" + data.categories +"</th></tr>");
+            })
+        })
+    })
+    $('input').click(function(){
+        $.ajax("data/inventory.json").done(function(json){
+            $("#insertProducts").html("")
+            $.each(json, function(i, data){
+                $("#insertProducts").append("<tr><th>" + data.title + "</th><th>" + data.quantity + "</th><th>" + data.price + "</th><th>" + data.categories +"</th></tr>");
+            })
+        })
+    })
+})();
+
+</script>
+
+</body>
+</html>

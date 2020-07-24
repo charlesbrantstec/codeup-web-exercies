@@ -187,15 +187,48 @@
        //      }
        //      return arr.sort().reverse();
        //  }
-        function evenlyDivisible(x,y){
-            if(typeof x === "number" && typeof y === "number"){
-                return x%y===0;
-            }else{
+       //  function evenlyDivisible(x,y){
+       //      if(typeof x === "number" && typeof y === "number"){
+       //          return x%y===0;
+       //      }else{
+       //          return null;
+       //      }
+       //  }
+       //  console.log(evenlyDivisible(4,2));
+       //
+       //  function inchesToFeet(num){
+       //      if (typeof num === "number"){
+       //          return num / 12 + " ft";
+       //      } else {
+       //          return null;
+       //      }
+       //  }
+       //  console.log(inchesToFeet(12));
+       //  function wordCount(str){
+       //      if (typeof  str === "string"){
+       //         let newStr = str.split(" ");
+       //          return newStr.length;
+       //      } else{
+       //          return null;
+       //      }
+       //  }
+       //  console.log(wordCount(["good", "day", "sunshine"]));
+       //  console.log(wordCount("good day sunshine"));
+        function fizzBuzz(num){
+            if (num % 3 ===0 && num % 5 === 0){
+                return "fizzbuzz";
+            } else if (num % 3 === 0 ){
+                return "fizz";
+            } else if (num % 5 === 0){
+                return "buzz";
+            } else {
                 return null;
             }
         }
-        console.log(evenlyDivisible(4,2));
-
+       console.log(fizzBuzz(15));
+       console.log(fizzBuzz(5));
+       console.log(fizzBuzz(3));
+       console.log(fizzBuzz(8));
     </script>
 </body>
 </html>

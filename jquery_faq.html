@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/jquery_faq.css">
+    <style>
+        .highlight {background-color: yellow;}
+        .bold {font-weight: bold;}
+        .blue {color: blue}
+    </style>
 </head>
 <body>
 <p>National Parks FAQ's:</p>
@@ -38,16 +43,51 @@
     <dt>Which parks had more than 10 million visits last year?</dt>
     <dd class="invisible">Golden Gate National Recreation Area, Blue Ridge Parkway, and Great Smoky Mountains National Park</dd>
 </dl>
+<h3>Smoky Mountain National Park</h3>
+<ul>
+    <li>Is the most visited national park</li>
+    <li>Area‎: ‎522,419 acres (2,114.15 km2)</li>
+    <li>Its region was part of the homeland of the Cherokees.</li>
+</ul>
+<h3>Grand Canyon National Park</h3>
+<ul>
+    <li>It iss the 15th site in the United States to have been named a national park.</li>
+    <li>It was designated a World Heritage Site by UNESCO in 1979.</li>
+    <li>It celebrated its 100th anniversary on February 26, 2019.</li>
+</ul>
+<h3>Redwood National Park</h3>
+<ul>
+    <li>Home to the world's tallest tree; "Hyperion".</li>
+    <li>It is a designated World Heritage Site.</li>
+    <li>The park contains 45% of survivng redwood trees.</li>
+</ul>
+<button type="button" id="btn1">Click Me!</button>
 <script src="js/jquery.js"></script>
 <script>
     "use strict";
 
     $(document).ready(function() {
-        $('body').click(function(event) {
-            // event.preventDefault();
+        $('dt').click(function(event) {
             $('dd').toggleClass('invisible');
-        });
-    });
+        })
+    })
+
+    $("#btn1").click(function(){
+        $('ul').each(function (){
+            $(this).children().last().toggleClass("highlight")
+        })
+    })
+
+    $('h3').click(function(){
+        $(this).next().toggleClass("bold")
+    })
+
+    $('li').click(function(){
+        $(this).parent().children().first().toggleClass("blue");
+    })
+</script>
+<script>
+
 </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="posts"></div>
+<input type="button" value="Refresh Blog" id="refresh" class="btn btn-warning btn-lg btn-block">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    (function() {
+        "use strict"
+
+        $(document).ready(function(){
+            $.ajax("data/blog.json").done(function(json){
+                $.each(json, function(i, data){
+                    $("#posts").append("<h1>" + data.title + "</h1><h4>" + data.date + "</h4><p>" + data.content + "</p><p>" + data.categories +"</p>");
+                })
+            })
+        })
+        $('input').click(function(){
+            $.ajax("data/blog.json").done(function(json){
+                $("#posts").html("")
+                $.each(json, function(i, data){
+                    $("#posts").append("<h1>" + data.title + "</h1><h4>" + data.date + "</h4><p>" + data.content + "</p><p>" + data.categories +"</p>");
+                })
+            })
+        })
+    })();
+</script>
+</body>
+</html>
