@@ -5,6 +5,7 @@
 
 body {
     background-color: #f9f9fa
+    /*background-color: #1A1A1A*/
 }
 
 .flex {
@@ -147,4 +148,84 @@ p {
 
 .card-weather .weakly-weather .weakly-weather-item i {
     font-size: 1.2rem
+}
+.coordinates {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    border-radius: 3px;
+    display: none;
+}
+body {
+    font-family: Source Code Pro;
+    background: url("../img/clouds.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.source {
+    font-family: Source Code Pro;
+    color: black;
+}
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 30px;
+    color: #2E3D48;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: WHITE;
+    }
+}
+
+@-moz-keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: WHITE;
+    }
+}
+
+@-webkit-keyframes "blink" {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: WHITE;
+    }
+}
+
+@-ms-keyframes "blink" {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: WHITE;
+    }
+}
+
+@-o-keyframes "blink" {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: WHITE;
+    }
 }

@@ -4,13 +4,24 @@
     <title>Weather Map</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/weathermap.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+</head>
+    <style>#map {width: 100%; height: 200px;}</style>
 </head>
 <body>
-
-    <h1 class="bg-primary">Weather Map</h1>
-
-    <div class="row">
-        <div class="col-sm-2.4">
+<div class="container">
+    <br>
+    <h1 class=" rounded source text-white">Weather App<span class="blinking-cursor">_</span></h1>
+    <br>
+    <form class="form-inline my-2 my-lg-0">
+        <input id="geokode" class="form-control mr-sm-2" type="search" placeholder="Enter city here" aria-label="Search">
+        <button id="gbutton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <br>
+<!--row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 d-flex-->
+    <container class="container-fluid">
+        <section class="container-fluid d-flex flex-row justify-content-around">
             <div id="card0" class="card" style="width: 18rem;">
                 <div id="weatherDate" class="card-header">Weather Date</div>
                 <ul class="list-group list-group-flush">
@@ -20,8 +31,6 @@
                     <li id="pressure" class="list-group-item">bla</li>
                 </ul>
             </div>
-        </div>
-        <div class="col-sm-2.4">
             <div id="card1" class="card" style="width: 18rem;">
                 <div id="weatherDate" class="card-header">Weather Date</div>
                 <ul class="list-group list-group-flush">
@@ -31,8 +40,6 @@
                     <li id="pressure" class="list-group-item">bla</li>
                 </ul>
             </div>
-        </div>
-        <div class="col-sm-2.4">
             <div id="card2" class="card" style="width: 18rem;">
                 <div id="weatherDate" class="card-header">
                     Weather Date
@@ -44,11 +51,10 @@
                     <li id="pressure" class="list-group-item">bla</li>
                 </ul>
             </div>
-        </div>
-        <div class="col-sm-2.4">
+
             <div id="card3" class="card" style="width: 18rem;">
                 <div id="weatherDate" class="card-header">
-                    Weather Date
+                        Weather Date
                 </div>
                 <ul class="list-group list-group-flush">
                     <li id="highLowTemp" class="list-group-item">bla</li>
@@ -57,11 +63,9 @@
                     <li id="pressure" class="list-group-item">bla</li>
                 </ul>
             </div>
-        </div>
-        <div class="col-sm-2.4">
             <div id="card4" class="card" style="width: 18rem;">
                 <div id="weatherDate" class="card-header">
-                    Weather Date
+                        Weather Date
                 </div>
                 <ul class="list-group list-group-flush">
                     <li id="highLowTemp" class="list-group-item">bla</li>
@@ -70,9 +74,13 @@
                     <li id="pressure" class="list-group-item">bla</li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <div id='map'></div>
+
+        </section>
+    </container>
+    <h1 class=" rounded source text-white">Click the map!</h1>
+    <div class="rounded" id='map'></div>
+</div>
+    <script src="js/mapbox-geocoder-utils.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
 <script src="js/jquery.js"></script>
