@@ -40,14 +40,14 @@ $(function(){
     })
         .setLngLat([lon0,lat0])
         .addTo(map);
-
+    //add marker on click
     map.on('click', addMarker);
     function addMarker(e){
         console.log(e);
         marker.setLngLat([e.lngLat.lng, e.lngLat.lat]);
         updateWeather(e.lngLat.lat, e.lngLat.lng);
     }
-
+    //search and fly
     $('#gbutton').click(function (e){
         e.preventDefault();
         var htmlString = $('#geokode').val();
