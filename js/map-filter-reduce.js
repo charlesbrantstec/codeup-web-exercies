@@ -1,3 +1,5 @@
+"use strict"
+
 const users = [
     {
         id: 1,
@@ -59,9 +61,9 @@ let userNames = users.reduce((a,user)=> {
 console.log(userNames);
 
 //     Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-let longestEmail = users.reduce.((a,user)=> {
-    a.push(user.name);
-    return a;
+let longestEmail = users.reduce((longest, user) => {
+    longest.push(user.name);
+    return longest;
 }, []).join(', ');
 
-console.log(userNames);
+console.log(longestEmail);
